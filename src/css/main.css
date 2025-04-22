@@ -1,13 +1,13 @@
-@import url("./_variables.css");
-@import url("./_navigation.css");
-@import url("./_hero.css");
-@import url("./_buttons.css");
-@import url("./animations/_button-animation.css");
-@import url("./animations/_text-animation.css");
-@import url("./_featured.css");
-@import url("./_newproducts.css");
-@import url("./_shoppingcart.css");
-@import url("./_footer.css");
+@import url("./variables.css");
+@import url("./navigation.css");
+@import url("./hero.css");
+@import url("./buttons.css");
+@import url("./animations/button-animation.css");
+@import url("./animations/text-animation.css");
+@import url("./featured.css");
+@import url("./newproducts.css");
+@import url("./shoppingcart.css");
+@import url("./footer.css");
 
 html {
   font-family: var(--font-base);
