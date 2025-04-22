@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XPLY | Supply</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Special+Gothic+Expanded+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/src/assets/images/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/src/assets/images/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="/src/assets/images/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/src/assets/images/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="XPLY" />
+    <link rel="manifest" href="/src/assets/images/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
+  </head>
+  <body>
+    <a href="#main" class="visually-hidden skip-to-content"
+      >Skip to main content</a
+    >
+    <header class="header">
+      <section class="header__logo">
+        <a href="./">
+          <h1 class="header__logo_text">XPLY</h1>
+        </a>
+      </section>
+      <div class="header-group">
+        <nav class="header__nav">
+          <ul class="header__nav_list">
+            <li class="header__nav_item"><a href="#">new</a></li>
+            <li class="header__nav_item has-megamenu">
+              <a href="#">all <i class="fa-solid fa-chevron-down"></i></a>
+              <div class="megamenu">
+                <ul class="megamenu__list">
+                  <li><a href="#">T-Shirts</a></li>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Zip Hoodies</a></li>
+                  <li><a href="#">Denim</a></li>
+                  <li><a href="#">Sportswear</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="header__nav_item has-megamenu">
+              <a href="#">men</a> <i class="fa-solid fa-chevron-down"></i>
+              <div class="megamenu">
+                <ul class="megamenu__list">
+                  <li><a href="#">T-Shirts</a></li>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Zip Hoodies</a></li>
+                  <li><a href="#">Denim</a></li>
+                  <li><a href="#">Sportswear</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="header__nav_item has-megamenu">
+              <a href="#">women</a> <i class="fa-solid fa-chevron-down"></i>
+              <div class="megamenu">
+                <ul class="megamenu__list">
+                  <li><a href="#">T-Shirts</a></li>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Zip Hoodies</a></li>
+                  <li><a href="#">Denim</a></li>
+                  <li><a href="#">Sportswear</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <section class="header__icons">
+          <div class="shopping-cart-wrapper has-megamenu">
+            <a
+              href="#"
+              class="header__icon"
+              id="shopping-cart-link"
+              aria-label="Shoppingcart"
+            >
+              <i id="shopping-cart-icon" class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count" class="cart-count">0</span>
+            </a>
+            <div class="megamenu">
+              <button class="dropdown-btn" id="view-cart">View</button>
+              <button class="dropdown-btn" id="clear-cart">Clear</button>
+            </div>
+          </div>
+          <a href="#" class="header__icon" aria-label="Account">
+            <i class="fa-solid fa-circle-user"></i>
+          </a>
+        </section>
+      </div>
+
+      <!-- Cart Sidebar -->
+      <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-sidebar-header">
+          <h2>Your Cart</h2>
+          <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+      </div>
+
+      <div id="cart-overlay" class="cart-overlay"></div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero__content">
+          <h2 class="hero__content_title">
+            <span class="hero__content_title--name">XPLY</span>
+          </h2>
+          <div class="hero__content_text">
+            <span class="changing-text">Lifestyle</span>
+            <span class="cursor">|</span>
+          </div>
+        </div>
+      </section>
+      <section class="products__featured">
+        <article class="products__featured_item">
+          <a class="products__featured_item--link" href="#">
+            <img
+              class="products__featured_item--img"
+              src="./src/assets/images/products/featured/feature1.jpg"
+              alt="Featured product"
+            />
+          </a>
+          <span class="products__featured_item--text">New Hoodies</span>
+        </article>
+
+        <article class="products__featured_item">
+          <a class="products__featured_item--link" href="#">
+            <img
+              class="products__featured_item--img"
+              src="./src/assets/images/products/featured/feature2.jpg"
+              alt="Featured product"
+            />
+          </a>
+          <span class="products__featured_item--text">Men</span>
+        </article>
+      </section>
+
+      <section class="products__new">
+        <h2 class="products__new_title">New Drops</h2>
+        <div class="products__new_container">
+          <div class="products__new_item">
+            <div class="products__new_item--img-wrapper">
+              <img
+                class="products__new_item--img main-img"
+                src="./src/assets/images/products/new/product1.jpg"
+                alt="New product 1"
+              />
+              <img
+                class="products__new_item--img hover-img"
+                src="./src/assets/images/products/new/hover/producthover1.jpg"
+                alt="New product 1 alternate view"
+              />
+            </div>
+            <div class="products_new_item--content">
+              <h3>New Product 1</h3>
+              <div class="products_new_item--content-container">
+                <span class="products_new_item--price">$50</span>
+                <div class="products_new_item_buttons">
+                  <a
+                    href="#"
+                    class="btn btn--view-page add-to-cart"
+                    data-product-id="1"
+                    data-product-name="New Product 1"
+                    data-product-price="50"
+                    data-product-img="./src/assets/images/products/new/product1.jpg"
+                  >
+                    <i id="shopping-cart" class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                  <a class="btn btn--view-page" href="#">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products__new_item">
+            <div class="products__new_item--img-wrapper">
+              <img
+                class="products__new_item--img main-img"
+                src="./src/assets/images/products/new/product2.jpg"
+                alt="New product 2"
+              />
+              <img
+                class="products__new_item--img hover-img"
+                src="./src/assets/images/products/new/hover/producthover1.jpg"
+                alt="New product 2 alternate view"
+              />
+            </div>
+            <div class="products_new_item--content">
+              <h3>New Product 2</h3>
+              <div class="products_new_item--content-container">
+                <span class="products_new_item--price">$50</span>
+                <div class="products_new_item_buttons">
+                  <a
+                    href="#"
+                    class="btn btn--view-page add-to-cart"
+                    data-product-id="2"
+                    data-product-name="New Product 2"
+                    data-product-price="50"
+                    data-product-img="./src/assets/images/products/new/product2.jpg"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                  <a class="btn btn--view-page" href="#">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products__new_item">
+            <div class="products__new_item--img-wrapper">
+              <img
+                class="products__new_item--img main-img"
+                src="./src/assets/images/products/new/product3.jpg"
+                alt="New product 3"
+              />
+              <img
+                class="products__new_item--img hover-img"
+                src="./src/assets/images/products/new/hover/producthover1.jpg"
+                alt="New product 3 alternate view"
+              />
+            </div>
+            <div class="products_new_item--content">
+              <h3>New Product 3</h3>
+              <div class="products_new_item--content-container">
+                <span class="products_new_item--price">$50</span>
+                <div class="products_new_item_buttons">
+                  <a
+                    href="#"
+                    class="btn btn--view-page add-to-cart"
+                    data-product-id="3"
+                    data-product-name="New Product 3"
+                    data-product-price="50"
+                    data-product-img="./src/assets/images/products/new/product3.jpg"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                  <a class="btn btn--view-page" href="#">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products__new_item">
+            <div class="products__new_item--img-wrapper">
+              <img
+                class="products__new_item--img main-img"
+                src="./src/assets/images/products/new/product4.jpg"
+                alt="New product 4"
+              />
+              <img
+                class="products__new_item--img hover-img"
+                src="./src/assets/images/products/new/hover/producthover1.jpg"
+                alt="New product 4 alternate view"
+              />
+            </div>
+            <div class="products_new_item--content">
+              <h3>New Product 4</h3>
+              <div class="products_new_item--content-container">
+                <span class="products_new_item--price">$50</span>
+                <div class="products_new_item_buttons">
+                  <a
+                    href="#"
+                    class="btn btn--view-page add-to-cart"
+                    data-product-id="4"
+                    data-product-name="New Product 4"
+                    data-product-price="50"
+                    data-product-img="./src/assets/images/products/new/product4.jpg"
+                  >
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                  <a class="btn btn--view-page" href="#">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products__best-sellers">
+        <h2 class="products__best-sellers_title">Best Sellers</h2>
+        <div class="products__new_container">
+          <div class="products__new_item">
+            <div class="products__new_item--img-wrapper">
+              <img
+                class="products__new_item--img main-img"
+                src="https://placehold.co/600x400"
+                alt="New product 1"
+              />
+              <img
+                class="products__new_item--img hover-img"
+                src="./src/assets/images/products/new/hover/producthover1.jpg"
+                alt="New product 1 alternate view"
+              />
+            </div>
+            <div class="products_new_item--content">
+              <h3>New Product 1</h3>
+              <div class="products_new_item--content-container">
+                <span class="products_new_item--price">$50</span>
+                <div class="products_new_item_buttons">
+                  <a href="#" class="btn btn--view-page add-to-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                  <a class="btn btn--view-page" href="#">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products__new_item">
+            <div class="products__new_item--img-wrapper">
+              <img
+                class="products__new_item--img main-img"
+                src="https://placehold.co/600x400"
+                alt="New product 2"
+              />
+              <img
+                class="products__new_item--img hover-img"
+                src="./src/assets/images/products/new/hover/producthover1.jpg"
+                alt="New product 2 alternate view"
+              />
+            </div>
+            <div class="products_new_item--content">
+              <h3>New Product 2</h3>
+              <div class="products_new_item--content-container">
+                <span class="products_new_item--price">$50</span>
+                <div class="products_new_item_buttons">
+                  <a href="#" class="btn btn--view-page add-to-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                  <a class="btn btn--view-page" href="#">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products__new_item">
+            <div class="products__new_item--img-wrapper">
+              <img
+                class="products__new_item--img main-img"
+                src="https://placehold.co/600x400"
+                alt="New product 3"
+              />
+              <img
+                class="products__new_item--img hover-img"
+                src="./src/assets/images/products/new/hover/producthover1.jpg"
+                alt="New product 3 alternate view"
+              />
+            </div>
+            <div class="products_new_item--content">
+              <h3>New Product 3</h3>
+              <div class="products_new_item--content-container">
+                <span class="products_new_item--price">$50</span>
+                <div class="products_new_item_buttons">
+                  <a href="#" class="btn btn--view-page add-to-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                  <a class="btn btn--view-page" href="#">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products__new_item">
+            <div class="products__new_item--img-wrapper">
+              <img
+                class="products__new_item--img main-img"
+                src="https://placehold.co/600x400"
+                alt="New product 4"
+              />
+              <img
+                class="products__new_item--img hover-img"
+                src="./src/assets/images/products/new/hover/producthover1.jpg"
+                alt="New product 4 alternate view"
+              />
+            </div>
+            <div class="products_new_item--content">
+              <h3>New Product 4</h3>
+              <div class="products_new_item--content-container">
+                <span class="products_new_item--price">$50</span>
+                <div class="products_new_item_buttons">
+                  <a href="#" class="btn btn--view-page add-to-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                  <a class="btn btn--view-page" href="#">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="footer__support">
+        <h3>Client Support</h3>
+        <ul class="footer__support_list">
+          <li class="footer__support_item"><a href="#">Contact</a></li>
+          <li class="footer__support_item"><a href="#">FAQ</a></li>
+          <li class="footer__support_item"><a href="#">Shipping</a></li>
+          <li class="footer__support_item"><a href="#">Returns</a></li>
+          <li class="footer__support_item"><a href="#">Privacy Policy</a></li>
+          <li class="footer__support_item"><a href="#">Terms of Service</a></li>
+        </ul>
+      </section>
+
+      <section class="footer__logo">
+        <h2 class="footer__logo_text">XPLY</h2>
+        <div class="footer__icons">
+          <a
+            href="#"
+            class="footer__icon"
+            aria-label="Facebook"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href="#"
+            class="footer__icon"
+            aria-label="Instagram"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="footer__icon" aria-label="Twitter" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="footer__newsletter">
+        <h3>Newsletter</h3>
+        <p class="footer__newsletter_subtext">
+          Subscribe to our newsletter for the latest updates.
+        </p>
+        <form
+          class="footer__newsletter_form"
+          action="./pages/subscribe.php"
+          method="POST"
+        >
+          <input
+            type="email"
+            name="email"
+            class="footer__newsletter_input"
+            placeholder="Enter your email..."
+            required
+          />
+          <button type="submit" class="btn btn--subscribe">Subscribe</button>
+        </form>
+      </section>
+    </footer>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
