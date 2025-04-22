@@ -1,0 +1,56 @@
+:root {
+    /* Kleuren */
+    --color-black: #111111;
+    --color-white: #fdfdfd;
+    --color-gray-light: #f5f5f5;
+    --color-gray-medium: #cccccc;
+    --color-gray-dark: #333333;
+  
+    --color-blue: #007bff; /* primary CTA blauw */
+    --color-blue-hover: #0056b3; /* CTA hover kleur */
+    
+    --color-error: #ff0000;
+  
+    /* Tekstkleuren */
+    --text-primary: var(--color-black);
+    --text-secondary: var(--color-gray-dark);
+    --text-tertiary: var(--color-gray-medium);
+    --text-quaternary: var(--color-gray-light);
+    
+    --text-inverted: var(--color-white);
+    --text-hover: var(--color-blue-hover);
+  
+    /* Achtergronden */
+    --bg-primary: var(--color-white);
+    --bg-secondary: var(--color-gray-light);
+    --bg-dark: var(--color-black);
+  
+    /* Knoppen */
+    --btn-primary-bg: var(--color-blue);
+    --btn-primary-text: var(--color-white);
+    --btn-primary-hover: var(--color-blue-hover);
+
+    --border-color-dark: var(--color-gray-dark);
+    --border-color-light: var(--color-gray-light)
+  
+    /* Afstanden & radius */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+  
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 1rem;
+  
+    /* Fonts */
+    --font-base: 'Inter', sans-serif;
+    --font-extra: 'Special Gothic Expanded One', sans-serif;
+    --font-size-base: 1rem;
+    --font-size-sm: 0.875rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+  }
+  

@@ -1,0 +1,48 @@
+@import url("./_variables.css");
+@import url("./_navigation.css");
+@import url("./_hero.css");
+@import url("./_buttons.css");
+@import url("./animations/_button-animation.css");
+@import url("./animations/_text-animation.css");
+@import url("./_featured.css");
+@import url("./_newproducts.css");
+@import url("./_shoppingcart.css");
+@import url("./_footer.css");
+
+html {
+  font-family: var(--font-base);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: var(--font-extra);
+}
+
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+}
+
+.skip-to-content:focus-visible {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11rem;
+  height: 3rem;
+  padding: var(--spacing-sm);
+  background-color: var(--color-blue);
+  color: var(--text-inverted);
+  z-index: 1001;
+}
