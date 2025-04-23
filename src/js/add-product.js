@@ -1,3 +1,6 @@
+import { clearInMemoryCart } from "./cart.js";
+import { showToast } from "./toast-popup.js";
+
 export function loadCartCount() {
   const count = localStorage.getItem("cartCount");
   return count ? parseInt(count, 10) : 0;
@@ -22,8 +25,8 @@ export function clearCart() {
   saveCartCount(0);
   updateCartDisplay();
   
-  localStorage.removeItem("cartItems");
-  alert("Cart cleared!");
+  clearInMemoryCart();
+  showToast("Your cart has been cleared.");
 }
 
 export function viewCart() {

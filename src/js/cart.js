@@ -79,6 +79,9 @@ export function renderCartItems() {
           <span class="cart-item-quantity">
             Quantity: ${product.quantity}
           </span>
+          <span class="cart-item-quantity">
+            Color: ${product.color}
+          </span>
         </div>
       <div class="cart-item-remove">
         <button
@@ -147,4 +150,10 @@ export function setupAddToCartButtons() {
       updateCartDisplay();
     });
   }
+}
+
+export function clearInMemoryCart() {
+  cart.length = 0;
+  updateCartCount();
+  renderCartItems();
 }

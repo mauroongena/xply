@@ -151,7 +151,8 @@
 }
 
 .color-btn.selected {
-  box-shadow: 0 0 0 2px #000;
+  outline: 3px solid var(--bg-dark);
+  outline-offset: 4px;
 }
 
 .btn-remove {
@@ -163,7 +164,8 @@
 
 .color-buttons {
   display: flex;
-  gap: 0.6rem;
+  gap: 1rem;
+  padding-top: .5rem;
 }
 
 .color-btn {
@@ -177,4 +179,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  outline: none;
 }
