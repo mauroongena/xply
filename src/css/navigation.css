@@ -17,6 +17,10 @@
   text-decoration: none;
 }
 
+.header--hidden {
+  transform: translateY(-100%);
+}
+
 .header__logo_text {
   font-size: var(--font-size-xxl);
   font-family: var(--font-extra);
