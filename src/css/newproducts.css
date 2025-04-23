@@ -61,6 +61,7 @@
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .products__new_item--img {
