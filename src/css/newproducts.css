@@ -20,7 +20,8 @@
 
 .products__new_container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .products__new_item {
@@ -98,5 +99,19 @@
   }
   100% {
     filter: brightness(1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products__new_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .products__new_container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
   }
 }

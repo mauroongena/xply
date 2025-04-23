@@ -1,4 +1,6 @@
 import { handleHeaderScroll } from "./header-scroll.js";
+import { initNavToggle } from './togglehamburger.js';
+
 import {
   updateCartDisplay,
   clearCart,
@@ -11,6 +13,7 @@ import { typeEffect } from "./animations/type-effect.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   handleHeaderScroll();
+  initNavToggle();
   updateCartDisplay();
   setupCartSidebar();
   setupAddToCartButtons();

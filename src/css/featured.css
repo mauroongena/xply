@@ -1,6 +1,6 @@
 .products__featured {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-family: var(--font-extra);
 }
 
@@ -10,6 +10,7 @@
   overflow: hidden;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -42,4 +43,20 @@
 
 .products__featured_item:hover .products__featured_item--img {
   transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  .products__featured {
+    flex-direction: row;
+  }
+  
+  .products__featured_item {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .products__featured_item {
+    flex-direction: row;
+  }
 }
