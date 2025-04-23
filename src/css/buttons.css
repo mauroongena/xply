@@ -76,7 +76,8 @@
   animation: color_anim 1s infinite 0.4s;
 }
 
-.btn--view-page {
+.btn--view-page,
+.btn--shoppingcart {
   background-color: var(--bg-dark);
   color: var(--btn-primary-text);
   border-radius: var(--border-radius-md);
@@ -84,7 +85,9 @@
   font-size: var(--font-size-sm);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  
+  cursor: pointer;
+  border: none;
+
   &:hover {
     background-color: var(--btn-primary-bg);
     color: var(--btn-primary-text);
@@ -105,4 +108,73 @@
   &:hover {
     background-color: var(--btn-primary-hover);
   }
+}
+
+
+.modal-product-size button {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color-dark);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--bg-dark);
+    color: var(--btn-primary-text);
+  }
+}
+
+.btn--add-to-cart {
+  background-color: var(--bg-dark);
+  color: var(--text-inverted);
+  border: none;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #1f1f1f;
+    color: var(--btn-primary-text);
+  }
+}
+
+.color-btn.black {
+  background-color: var(--bg-dark);
+}
+
+.color-btn.selected {
+  box-shadow: 0 0 0 2px #000;
+}
+
+.btn-remove {
+  background-color: var(--color-error);
+  color: var(--text-inverted);
+  border: none;
+  cursor: pointer;
+}
+
+.color-buttons {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.color-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  padding: 0.25rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

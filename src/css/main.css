@@ -7,6 +7,7 @@
 @import url("./featured.css");
 @import url("./newproducts.css");
 @import url("./shoppingcart.css");
+@import url("./cartmodal.css");
 @import url("./footer.css");
 
 html {
@@ -45,4 +46,17 @@ h1 {
   background-color: var(--color-blue);
   color: var(--text-inverted);
   z-index: 1001;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  height: 100%;
+}
+
+.error-message {
+  color: var(--color-error);
+}
+
+.bold {
+  font-weight: bold;
 }

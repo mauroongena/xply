@@ -1,6 +1,6 @@
 export function loadCartCount() {
   const count = localStorage.getItem("cartCount");
-  return count ? parseInt(count) : 0;
+  return count ? parseInt(count, 10) : 0;
 }
 
 export function saveCartCount(count) {
