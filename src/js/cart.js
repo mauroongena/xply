@@ -4,6 +4,7 @@ import {
   updateCartDisplay,
 } from "./add-product.js";
 import { showCartModal } from "./show-cart-modal.js";
+import { showToast } from "./toast-popup.js";
 
 const cart = [];
 let pendingProduct = null;
@@ -25,6 +26,8 @@ export function addToCart(product) {
 
   updateCartCount();
   renderCartItems();
+
+  showToast(`${product.name} (${product.size || "one size"}) added to cart!`);
 }
 
 export function removeFromCart(productId, size) {
