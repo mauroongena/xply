@@ -50,8 +50,18 @@
         </a>
       </section>
 
-      <button id="nav-toggle" class="header__toggle" aria-label="Open navigation">
-        <img id="hamburger-icon" class="hamburger-icon" src="./src/assets/images/head/hamburger.svg" alt="hamburger icon" aria-hidden="true" />
+      <button
+        id="nav-toggle"
+        class="header__toggle"
+        aria-label="Open navigation"
+      >
+        <img
+          id="hamburger-icon"
+          class="hamburger-icon"
+          src="./src/assets/images/head/hamburger.svg"
+          alt="hamburger icon"
+          aria-hidden="true"
+        />
       </button>
 
       <div class="header-group">
@@ -71,7 +81,7 @@
               </div>
             </li>
             <li class="header__nav_item has-megamenu">
-              <a href="#">men <i class="fa-solid fa-chevron-down"></i></a> 
+              <a href="#">men <i class="fa-solid fa-chevron-down"></i></a>
               <div class="megamenu">
                 <ul class="megamenu__list">
                   <li><a href="#">T-Shirts</a></li>
@@ -99,7 +109,7 @@
         <section class="header__icons">
           <div class="shopping-cart-wrapper has-megamenu">
             <a
-              href="#"
+              href="./pages/shoppingcart/"
               class="header__icon"
               id="shopping-cart-link"
               aria-label="Shoppingcart"
@@ -112,9 +122,19 @@
               <button class="dropdown-btn" id="clear-cart">Clear</button>
             </div>
           </div>
-          <a href="#" class="header__icon" aria-label="Account">
-            <i class="fa-solid fa-circle-user"></i>
-          </a>
+          <div class="account-wrapper has-megamenu">
+            <a href="#" class="header__icon" aria-label="Account">
+              <i class="fa-solid fa-circle-user"></i>
+            </a>
+            <div class="account-menu">
+              <ul class="account-menu__list">
+                <li class="account-menu__item"><a href="#">Login</a></li>
+                <li class="account-menu__item"><a href="#">Register</a></li>
+                <li class="account-menu__item"><a href="#">My Account</a></li>
+                <li class="account-menu__item"><a href="#">Orders</a></li>
+              </ul>
+            </div>
+          </div>
         </section>
       </div>
 
@@ -170,7 +190,8 @@
         <h2 class="products__new_title">New Drops</h2>
         <div class="products__new_container">
           <div class="products__new_item">
-            <div class="products__new_item--img-wrapper add-to-cart"
+            <div
+              class="products__new_item--img-wrapper add-to-cart"
               data-product-id="1"
               data-product-name="New Product 1"
               data-product-price="50"
@@ -208,12 +229,13 @@
             </div>
           </div>
           <div class="products__new_item">
-              <div class="products__new_item--img-wrapper add-to-cart"
-                data-product-id="2"
-                data-product-name="New Product 2"
-                data-product-price="50"
-                data-product-img="https://placehold.co/600x400"
-              >
+            <div
+              class="products__new_item--img-wrapper add-to-cart"
+              data-product-id="2"
+              data-product-name="New Product 2"
+              data-product-price="50"
+              data-product-img="https://placehold.co/600x400"
+            >
               <img
                 class="products__new_item--img main-img"
                 src="https://placehold.co/600x400"
@@ -246,7 +268,8 @@
             </div>
           </div>
           <div class="products__new_item">
-            <div class="products__new_item--img-wrapper add-to-cart"
+            <div
+              class="products__new_item--img-wrapper add-to-cart"
               data-product-id="3"
               data-product-name="New Product 3"
               data-product-price="50"
@@ -284,7 +307,8 @@
             </div>
           </div>
           <div class="products__new_item">
-            <div class="products__new_item--img-wrapper add-to-cart"
+            <div
+              class="products__new_item--img-wrapper add-to-cart"
               data-product-id="4"
               data-product-name="New Product 4"
               data-product-price="50"
@@ -327,7 +351,8 @@
         <h2 class="products__best-sellers_title">Best Sellers</h2>
         <div class="products__new_container">
           <div class="products__new_item">
-            <div class="products__new_item--img-wrapper add-to-cart"
+            <div
+              class="products__new_item--img-wrapper add-to-cart"
               data-product-id="5"
               data-product-name="Best Product 1"
               data-product-price="50"
@@ -365,12 +390,13 @@
             </div>
           </div>
           <div class="products__new_item">
-            <div class="products__new_item--img-wrapper add-to-cart"
+            <div
+              class="products__new_item--img-wrapper add-to-cart"
               data-product-id="6"
               data-product-name="Best Product 2"
               data-product-price="50"
               data-product-img="https://placehold.co/600x400"
-              >
+            >
               <img
                 class="products__new_item--img main-img"
                 src="https://placehold.co/600x400"
@@ -403,12 +429,13 @@
             </div>
           </div>
           <div class="products__new_item">
-            <div class="products__new_item--img-wrapper add-to-cart"
+            <div
+              class="products__new_item--img-wrapper add-to-cart"
               data-product-id="7"
               data-product-name="Best Product 3"
               data-product-price="50"
               data-product-img="https://placehold.co/600x400"
-            >              
+            >
               <img
                 class="products__new_item--img main-img"
                 src="https://placehold.co/600x400"
@@ -441,12 +468,13 @@
             </div>
           </div>
           <div class="products__new_item">
-            <div class="products__new_item--img-wrapper add-to-cart"
+            <div
+              class="products__new_item--img-wrapper add-to-cart"
               data-product-id="8"
               data-product-name="Best Product 4"
               data-product-price="50"
               data-product-img="https://placehold.co/600x400"
-              >
+            >
               <img
                 class="products__new_item--img main-img"
                 src="https://placehold.co/600x400"
@@ -559,7 +587,6 @@
               <option value="7">7</option>
               <option value="8">8</option>
               <option value="9">9</option>
-              <option value="9+">9+</option>
             </select>
             <div class="modal-product-options">
               <div class="size-options">
@@ -584,8 +611,10 @@
             </div>
             <div class="modal-product-actions">
               <button id="add-to-cart-modal" class="btn btn--add-to-cart">
-                <i id="shopping-cart-icon" class="fa-solid fa-cart-shopping"></i>Add to Cart
+                <i id="shopping-cart-icon" class="fa-solid fa-cart-shopping"></i
+                >Add to Cart
               </button>
+            </div>
           </div>
         </div>
       </div>

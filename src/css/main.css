@@ -49,10 +49,10 @@ h1 {
   z-index: 1001;
 }
 
-.no-scroll {
-  overflow: hidden !important;
-  height: 100%;
-}
+// .no-scroll {
+//   overflow: hidden !important;
+//   height: 100%;
+// }
 
 .error-message {
   color: var(--color-error);

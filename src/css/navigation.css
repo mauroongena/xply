@@ -136,7 +136,8 @@
 
 .header__nav_item.has-megamenu > i.fa-chevron-down,
 .header__nav_item.has-megamenu .megamenu,
-.megamenu {
+.megamenu,
+.account-menu {
   display: none;
   visibility: hidden;
 }
@@ -203,8 +204,8 @@
     flex-direction: row;
     padding: 0;
     background: none;
-    justify-content: center;
-    max-width: 30rem;
+    justify-content: flex-end;
+    max-width: 100%;
   }
 
   .header__nav_list {
@@ -229,7 +230,22 @@
     display: block;
   }
 
-  .has-megamenu:hover .megamenu {
+  .account-menu {
+    display: block;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    background-color: var(--bg-primary);
+    z-index: 1000;
+    padding: 1.25rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+  }
+
+  .has-megamenu:hover .megamenu,
+  .has-megamenu:hover .account-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -247,10 +263,10 @@
     transition: all 0.3s ease;
     z-index: 999;
     padding: 3rem 2rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   }
 
-  .megamenu__list {
+  .megamenu__list,
+  .account-menu__list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -260,13 +276,15 @@
     max-width: 1200px;
   }
 
-  .megamenu__list li a {
+  .megamenu__list li a,
+  .account-menu__list li a {
     font-weight: bold;
     color: #333;
     text-decoration: none;
   }
 
-  .megamenu__list li a:hover {
+  .megamenu__list li a:hover,
+  .account-menu__list li a:hover {
     text-decoration: underline;
   }
 }

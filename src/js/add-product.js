@@ -16,9 +16,6 @@ export function updateCartDisplay() {
   if (display) {
     display.innerHTML = count;
   }
-  if (count > 9) {
-    display.innerHTML = "9+";
-  }
 }
 
 export function clearCart() {

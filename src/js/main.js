@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupCartSidebar();
   setupAddToCartButtons();
   typeEffect();
+  
 
   const viewBtn = document.getElementById("view-cart");
   const clearBtn = document.getElementById("clear-cart");

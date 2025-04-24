@@ -127,13 +127,17 @@ export function renderCartItems() {
 
 export function setupAddToCartButtons() {
   document.querySelectorAll(".add-to-cart").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", function(e) { 
       e.preventDefault();
+      e.stopPropagation();
+
+      console.log('add-to-cart geklikt');
+
       pendingProduct = {
-        id: btn.dataset.productId,
-        name: btn.dataset.productName,
-        price: parseFloat(btn.dataset.productPrice),
-        image: btn.dataset.productImg,
+        id: this.dataset.productId,
+        name: this.dataset.productName,
+        price: parseFloat(this.dataset.productPrice),
+        image: this.dataset.productImg,
         quantity: 1,
         size: null,
       };
