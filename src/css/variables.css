@@ -1,7 +1,7 @@
 :root {
     /* Kleuren */
     --color-black: #111111;
-    --color-white: #fdfdfd;
+    --color-white: rgb(253, 253, 253);
     --color-gray-light: #f5f5f5;
     --color-gray-medium: #cccccc;
     --color-gray-dark: #333333;
@@ -27,6 +27,7 @@
   
     /* Knoppen */
     --btn-primary-bg: var(--color-blue);
+    --btn-secondary-bg: var(--color-white);
     --btn-primary-text: var(--color-white);
     --btn-primary-hover: var(--color-blue-hover);
 

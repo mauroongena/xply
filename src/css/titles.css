@@ -1,0 +1,5 @@
+.products__sub_title {
+    font-family: var(--font-extra);
+    font-size: var(--font-size-xxl);
+    padding: 0 3rem;
+}

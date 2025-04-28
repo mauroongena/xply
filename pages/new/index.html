@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XPLY | Supply</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Special+Gothic+Expanded+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../../src/assets/images/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../../src/assets/images/favicon/favicon.svg"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../src/assets/images/favicon/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../src/assets/images/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="XPLY" />
+    <link
+      rel="manifest"
+      href="../../src/assets/images/favicon/site.webmanifest"
+    />
+    <link rel="stylesheet" href="../../src/css/reset.css" />
+    <link rel="stylesheet" href="../../src/css/main.css" />
+  </head>
+  <body>
+    <a href="#main" class="visually-hidden skip-to-content"
+      >Skip to main content</a
+    >
+    <header class="header">
+      <section class="header__logo">
+        <a href="../../">
+          <h1 class="header__logo_text">XPLY</h1>
+        </a>
+      </section>
+
+      <button
+        id="nav-toggle"
+        class="header__toggle"
+        aria-label="Open navigation"
+      >
+        <img
+          id="hamburger-icon"
+          class="hamburger-icon"
+          src="../../src/assets/images/head/hamburger.svg"
+          alt="hamburger icon"
+          aria-hidden="true"
+        />
+      </button>
+
+      <div class="header-group">
+        <nav class="header__nav">
+          <ul class="header__nav_list">
+            <li class="header__nav_item"><a href="./">new</a></li>
+            <li class="header__nav_item has-megamenu">
+              <a href="#">all <i class="fa-solid fa-chevron-down"></i></a>
+              <div class="megamenu">
+                <ul class="megamenu__list">
+                  <li><a href="#">T-Shirts</a></li>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Zip Hoodies</a></li>
+                  <li><a href="#">Denim</a></li>
+                  <li><a href="#">Sportswear</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="header__nav_item has-megamenu">
+              <a href="#">men <i class="fa-solid fa-chevron-down"></i></a>
+              <div class="megamenu">
+                <ul class="megamenu__list">
+                  <li><a href="#">T-Shirts</a></li>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Zip Hoodies</a></li>
+                  <li><a href="#">Denim</a></li>
+                  <li><a href="#">Sportswear</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="header__nav_item has-megamenu">
+              <a href="#">women <i class="fa-solid fa-chevron-down"></i></a>
+              <div class="megamenu">
+                <ul class="megamenu__list">
+                  <li><a href="#">T-Shirts</a></li>
+                  <li><a href="#">Hoodies</a></li>
+                  <li><a href="#">Zip Hoodies</a></li>
+                  <li><a href="#">Denim</a></li>
+                  <li><a href="#">Sportswear</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <section class="header__icons">
+          <div class="shopping-cart-wrapper has-megamenu">
+            <a
+              href="../pages/shoppingcart/"
+              class="header__icon"
+              id="shopping-cart-link"
+              aria-label="Shoppingcart"
+            >
+              <i id="shopping-cart-icon" class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count" class="cart-count">0</span>
+            </a>
+            <div class="megamenu">
+              <button class="dropdown-btn" id="view-cart">View</button>
+              <button class="dropdown-btn" id="clear-cart">Clear</button>
+            </div>
+          </div>
+          <div class="account-wrapper has-megamenu">
+            <a href="#" class="header__icon" aria-label="Account">
+              <i class="fa-solid fa-circle-user"></i>
+            </a>
+            <div class="account-menu">
+              <ul class="account-menu__list">
+                <li class="account-menu__item"><a href="#">Login</a></li>
+                <li class="account-menu__item"><a href="#">Register</a></li>
+                <li class="account-menu__item"><a href="#">My Account</a></li>
+                <li class="account-menu__item"><a href="#">Orders</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Cart Sidebar -->
+      <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-sidebar-header">
+          <h2>Your Cart</h2>
+          <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+      </div>
+
+      <div id="cart-overlay" class="cart-overlay"></div>
+    </header>
+
+    <main>
+      <section class="banner">
+        <img
+          class="banner__image"
+          src="../../src/assets/images/banners/XPLY_NEWv2.png"
+          alt="XPLY banner NEW drops"
+        />
+        <div class="banner__product_info">
+          <p class="banner__product_price_wrapper">
+            <span class="banner__product_price"
+              >$49,<span class="cents">99</span></span
+            >
+          </p>
+          <h2 class="banner__product_name">
+            <span class="brand-name">XPLY</span> Black hoodie
+          </h2>
+        </div>
+        <div class="banner__product_actions">
+          <a class="btn btn--view" id="view">View</a>
+          <button class="btn btn--add-to-cart--banner" id="add-to-cart">
+            Add to Cart
+          </button>
+        </div>
+      </section>
+
+      <section class="products">
+        <article class="products__top_container">
+          <h2 class="products__title">New Drops</h2>
+          <form action="" method="PUT">
+            <div class="products__search_container">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="text"
+                class="products__search_input"
+                placeholder="Search for products..."
+                aria-label="Search for products"
+              />
+              <button type="submit" class="btn btn--search">Search</button>
+            </div>
+          </form>
+          <div class="products__sort_container">
+            <label for="sort" class="products__sort_label">Sort by:</label>
+            <select id="sort" class="products__sort_select">
+              <option value="newest">Newest</option>
+              <option value="price-low-to-high">Price: Low to High</option>
+              <option value="price-high-to-low">Price: High to Low</option>
+            </select>
+          </div>
+        </article>
+
+        <article class="products__main_content_container">
+          <div class="products__filter_container">
+            <p class="products__filter_container_title">Filters</p>
+            <div class="filter">
+              <div class="filter__label">
+                <label for="filter-size" class="filter__label_text">Size</label>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div id="filter-size" class="filter__dropdown">
+                <p value="all">All Sizes</p>
+                <p value="small">Small</p>
+                <p value="medium">Medium</p>
+                <p value="large">Large</p>
+                <p value="xl">XL</p>
+              </div>
+            </div>
+
+            <div class="filter">
+              <div class="filter__label">
+                <label for="filter-size" class="filter__label_text"
+                  >Color</label
+                >
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <select id="filter-color" class="filter__dropdown">
+                <option value="all">All Colors</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+              </select>
+            </div>
+
+            <div class="filter">
+              <div class="filter__label">
+                <label for="filter-size" class="filter__label_text"
+                  >Best sold</label
+                >
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <select id="filter-best-sold" class="filter__dropdown">
+                <option value="all">All</option>
+                <option value="top-10">Top 10</option>
+                <option value="top-50">Top 50</option>
+              </select>
+            </div>
+
+            <div class="filter">
+              <div class="filter__label">
+                <label for="filter-size" class="filter__label_text">On sale</label>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <select id="filter-on-sale" class="filter__dropdown">
+                <option value="all">All</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+          <div class="products__grid">
+            <div class="product-card">
+              <img
+                class="product-card__image"
+                src="../../src/assets/images/products/hoodie1.png"
+                alt="Product 1"
+              />
+              <h3 class="product-card__name">Product 1</h3>
+              <p class="product-card__price">$49.99</p>
+              <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+              <img
+                class="product-card__image"
+                src="../../src/assets/images/products/hoodie2.png"
+                alt="Product 2"
+              />
+              <h3 class="product-card__name">Product 2</h3>
+              <p class="product-card__price">$49.99</p>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="footer__support">
+        <h3>Client Support</h3>
+        <ul class="footer__support_list">
+          <li class="footer__support_item"><a href="#">Contact</a></li>
+          <li class="footer__support_item"><a href="#">FAQ</a></li>
+          <li class="footer__support_item"><a href="#">Shipping</a></li>
+          <li class="footer__support_item"><a href="#">Returns</a></li>
+          <li class="footer__support_item"><a href="#">Privacy Policy</a></li>
+          <li class="footer__support_item"><a href="#">Terms of Service</a></li>
+        </ul>
+      </section>
+      <section class="footer__logo">
+        <h2 class="footer__logo_text">XPLY</h2>
+        <div class="footer__icons">
+          <a
+            href="#"
+            class="footer__icon"
+            aria-label="Facebook"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href="#"
+            class="footer__icon"
+            aria-label="Instagram"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="footer__icon" aria-label="Twitter" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+      </section>
+
+      <section class="footer__newsletter">
+        <h3>Newsletter</h3>
+        <p class="footer__newsletter_subtext">
+          Subscribe to our newsletter for the latest updates.
+        </p>
+        <form
+          class="footer__newsletter_form"
+          action="../pages/subscribe.php"
+          method="POST"
+        >
+          <input
+            type="email"
+            name="email"
+            class="footer__newsletter_input"
+            placeholder="Enter your email..."
+            required
+          />
+          <button type="submit" class="btn btn--subscribe">Subscribe</button>
+        </form>
+      </section>
+    </footer>
+    <script type="module" src="../../src/js/main.js"></script>
+  </body>
+</html>

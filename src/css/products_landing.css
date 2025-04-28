@@ -1,0 +1,132 @@
+.products__top_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xl) var(--spacing-xl);
+  border-bottom: 3px solid var(--border-color-dark);
+}
+
+.products__search_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 31rem;
+  min-width: 25rem;
+  margin: 0 auto;
+}
+
+.products__search_input {
+  width: 100%;
+  padding: 0.625rem 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.products__search_input:focus {
+  border-color: #007bff;
+}
+
+.products__search_container i {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.2rem;
+  color: #888;
+  pointer-events: none;
+}
+
+.btn--search {
+  position: absolute;
+  right: 0.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.3rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn--search:hover {
+  background-color: #0056b3;
+}
+
+.products__main_content_container {
+  display: flex;
+  gap: 2rem;
+}
+
+.filter {
+  border-bottom: 2px solid var(--border-color-dark);
+  padding: 0.5rem 0;
+}
+
+.products__filter_container {
+  flex: 0 0 20%;
+  border-right: 3px solid var(--border-color-dark);
+}
+
+.filter__label {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem var(--spacing-lg);
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.filter__label_text {
+  pointer-events: none;
+}
+
+.products__grid {
+  flex: 0 0 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter__dropdown {
+  display: none;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    display 0.3s allow-discrete;
+  width: 100%;
+  pointer-events: none;
+  background-color: white;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.filter__dropdown p {
+  cursor: pointer;
+}
+
+.filter__dropdown p:first-child {
+  padding-top: 2rem;
+}
+
+.filter.active .filter__dropdown {
+  display: flex;
+  padding: .5rem var(--spacing-lg);
+  flex-direction: column;
+  gap: 1.5rem;
+  opacity: 1;
+  transform: scaleY(1);
+  pointer-events: auto;
+}
+
+@starting-style {
+  .filter.active .filter__dropdown {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}

@@ -1,5 +1,6 @@
 const words = ["Lifestyle", "T-Shirts", "Front-Zips", "Hoodies", "Denims", "Sportswear"];
 const changingText = document.querySelector(".changing-text");
+
 let wordIndex = 0;
 let charIndex = 0;
 let typing = true;

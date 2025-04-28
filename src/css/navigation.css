@@ -91,7 +91,7 @@
   margin: 0;
 }
 
-.fa-chevron-down {
+.header__nav_item.has-megamenu > a > i.fa-chevron-down {
   display: none;
 }
 
